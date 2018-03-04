@@ -1,0 +1,12 @@
+<h1>phone book</h1>
+<ul class="people_list">
+	<li>name:phonenumber</li>
+	{{#each articles}}
+	<li>{{this.name}}:{{this.phonenumber}} 
+		<a href="/delete/{{this.id}}">刪除</a>
+		<a href="/update/{{this.id}}">更改</a>
+	</li>
+	{{/each}}
+</ul>
+
+<a href="/add">新增聯絡人</a>
