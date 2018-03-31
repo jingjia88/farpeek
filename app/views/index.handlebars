@@ -1,12 +1,23 @@
-<h1>phone book</h1>
-<ul class="people_list">
-	<li>name:phonenumber</li>
-	{{#each articles}}
-	<li>{{this.name}}:{{this.phonenumber}} 
-		<a href="/delete/{{this.id}}">刪除</a>
-		<a href="/update/{{this.id}}">更改</a>
-	</li>
-	{{/each}}
-</ul>
-
-<a href="/add">新增聯絡人</a>
+<head>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+</head>
+<body>
+	<div>
+		<h1>靖軒小屋</h1>
+		<ul class="nav nav-tabs">
+	        <li class="active"><a href="/">相片列表</a></li>
+	        <li><a href="/uploadpicture">上傳相片</a></li>
+	        <li><a href="/articles">文章列表</a></li>
+	        <li><a href="/uploadarticle">上傳文章</a></li>
+	    </ul>
+	</div>
+	<div>
+		{{#each data}}
+		<p>
+			<li>{{this.name}}</li>
+			<li><img src="/album/{{this.picture}}"></li>
+			<li><a href="/deletepicture/{{this.id}}">刪除文章</a></li>		
+		</p>
+		{{/each}}
+	</div>
+</body>

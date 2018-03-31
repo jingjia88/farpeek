@@ -1,0 +1,27 @@
+<head>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+</head>
+<body>
+	<div>
+		<h1>靖軒小屋</h1>
+		<ul class="nav nav-tabs">
+	        <li><a href="/">相片列表</a></li>
+	        <li><a href="/uploadpicture">上傳相片</a></li>
+	        <li><a href="/articles">文章列表</a></li>
+	        <li class="active"><a href="/uploadarticle">上傳文章</a></li>
+	    </ul>
+	</div>
+	<div>
+		<form action="/uploadarticle" method="POST">
+			<div>
+    			<input name="theme" placeholder="主題" type="string"/>
+			</div>
+  			<div>
+    			<textarea name="essay" placeholder="文章" type="string" rows="20" cols="80"></textarea> 
+			</div>
+  			<button type="submit">ADD!</button>
+ 		</form>
+	</div>
+</body>
+	
+

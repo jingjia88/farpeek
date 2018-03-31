@@ -1,0 +1,35 @@
+<head>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+</head>
+<body>
+	<div>
+		<h1> </h1>
+		<ul class="nav nav-tabs">
+	        <li><a href="/">相片列表</a></li>
+	        <li><a href="/uploadpicture">上傳相片</a></li>
+	        <li class="active"><a href="/articles">文章列表</a></li>
+	        <li><a href="/uploadarticle">上傳文章</a></li>
+	    </ul>
+	</div>
+	<div>
+		<ul>
+			<p>{{data.theme}}</p>
+			<p>{{data.essay}}</p>
+			<form action="/allessay/{{data.id}}" method="POST">
+					<input type="text" name="message" placeholder="留言">
+					<button type="submit">留言!</button>
+			</form>
+			<table border="1"width="400">
+				<tr><th>留言版</th></tr>
+				{{#each message}}
+					<tr>
+						<td>
+						{{this.message}}
+						</td>
+					</tr>
+				{{/each}}
+			</table>
+		</ul>
+	</div>
+</body>
+	

@@ -1,0 +1,29 @@
+<head>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+</head>
+<body>
+	<div>
+		<h1>Welcome!</h1>
+		<ul class="nav nav-tabs">
+	        <li><a href="/">相片列表</a></li>
+	        <li><a href="/uploadpicture">上傳相片</a></li>
+	        <li class="active"><a href="/articles">文章列表</a></li>
+	        <li><a href="/uploadarticle">上傳文章</a></li>
+	    </ul>
+	</div>
+	<div>
+		<ul>
+			{{#each data}}
+				<li>
+					<p>{{this.theme}}</p>
+					<p>{{this.essay}}</p>
+					<a href="/deletearticle/{{this.id}}">刪除文章</a>
+					<a href="/updatearticle/{{this.id}}">更新文章</a>
+					<a href="/allessay/{{this.id}}">全文顯示</a>
+				</li>
+			{{/each}}
+		</ul>
+		
+	</div>
+</body>
+	

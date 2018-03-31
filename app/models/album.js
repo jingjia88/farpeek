@@ -3,9 +3,9 @@
 
 module.exports = (sequelize, DataTypes) => {
 
-  const article = sequelize.define('article', {
-    theme: DataTypes.TEXT,
-    essay: DataTypes.TEXT,
+  const album = sequelize.define('album', {
+    name: DataTypes.TEXT,
+    picture: DataTypes.STRING,
   }, {
     classMethods: {
       associate: (models) => {
@@ -15,7 +15,6 @@ module.exports = (sequelize, DataTypes) => {
     }
   });
 
-  return article;
-  
+  return album;
 };
 
